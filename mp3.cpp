@@ -483,8 +483,8 @@ void mouse(int button, int state, int x, int y) {
     }
 }
 
-// Mouse motion event handler
-void mousemotion(int x, int y) {
+
+void gerakmouse(int x, int y) {
     if (mouseDown) {
         int dx = x - lastMouseX;
         int dy = y - lastMouseY;
@@ -589,7 +589,7 @@ int main (int argc, char **argv){
 	glutDisplayFunc(tampilan);
 	glutReshapeFunc(ukur);
 	glutMouseFunc(mouse);
-	glutMotionFunc(mousemotion);
+	glutMotionFunc(gerakmouse);
 	glutKeyboardFunc(keyboard);
 	myinit();
 	initLighting();
